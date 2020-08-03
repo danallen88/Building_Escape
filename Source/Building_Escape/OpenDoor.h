@@ -39,5 +39,16 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	AActor* ActorThatOpens;
+
+	float DoorLastOpened = 0.f;
+
+	UPROPERTY(EditAnywhere)
+	float DoorCloseDelay = 0.05f;
+
+	UPROPERTY(EditAnywhere)
+	float DoorOpenSpeed = 0.8f;
+
+	UPROPERTY(EditAnywhere)
+	float DoorCloseSpeed = 4.0f;
 		
 };
