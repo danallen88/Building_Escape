@@ -34,4 +34,7 @@ private:
 
 	// Return the first Actor within reach that has a physics body
 	FHitResult GetFirstPhysicsBodyInReach() const;
+
+	FVector GetReachLocation() const;
+	FVector GetPlayersWorldPosition() const;
 };

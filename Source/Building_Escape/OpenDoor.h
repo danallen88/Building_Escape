@@ -27,6 +27,7 @@ public:
 
 	void OpenDoor(float DeltaTime);
 	void CloseDoor(float DeltaTime);
+	float TotalMassOfActors() const;
 
 private:
 	UPROPERTY(EditAnywhere)
@@ -35,10 +36,7 @@ private:
 	float CurrentYaw;
 	
 	UPROPERTY(EditAnywhere)
-	ATriggerVolume* PressurePlate;
-
-	UPROPERTY(EditAnywhere)
-	AActor* ActorThatOpens;
+	ATriggerVolume* PressurePlate = nullptr;
 
 	float DoorLastOpened = 0.f;
 
@@ -50,5 +48,8 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float DoorCloseSpeed = 4.0f;
+
+	UPROPERTY(EditAnywhere)
+	float MassThreshold = 60.f;
 		
 };
